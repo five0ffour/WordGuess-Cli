@@ -1,0 +1,23 @@
+{
+  "name": "WordGuess-cli",
+  "version": "1.0.0",
+  "description": "a word guess command-line game using node and constructor functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/five0ffour/WordGuess-Cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/five0ffour/WordGuess-Cli/issues"
+  },
+  "homepage": "https://github.com/five0ffour/WordGuess-Cli#readme",
+  "dependencies": {
+    "inquirer": "^6.2.0"
+  }
+}
