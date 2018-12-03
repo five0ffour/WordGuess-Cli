@@ -19,7 +19,7 @@ function Letter (letter) {
 
     this.guessLetter = (character) => {
         if ((character === ' ') || 
-            (character === this.value)) {
+            (character.toLowerCase() === this.value.toLowerCase())) {
             this.guessed = true;
         }
     }

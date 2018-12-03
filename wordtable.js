@@ -23,6 +23,8 @@ function WordTable () {
         'Megalodon',
         'Giant Otter',
         'Giant Beaver',
+
+        // Modern  Megafauna
         'Hippopotamus',
         'American Bison',
         'Diprotodon',
