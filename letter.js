@@ -8,8 +8,11 @@ function Letter(letter) {
     this.value = letter;
     this.guessed = false;
 
+    // isGuessed() - helper function to return the formatted value of the letter
+    //               underlines mask letters that haven't been guessed
+    //               spaces are given as "freebies"
     this.isGuessed = function () {
-        return ((_this.guessed || (_this.value === ' '))? _this.value : "_");
+        return ((_this.guessed || (_this.value === ' ')) ?  _this.value : "_");
     };
 
     this.guessLetter = function (character) {

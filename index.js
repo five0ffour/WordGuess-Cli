@@ -67,17 +67,15 @@ function validateGuess(userGuess) {
     let match = guessedLetters.find(letter => letter === userGuess.toLowerCase());
     if (match) {
         // letter already guessed
-        console.log("Whoops!  You already guessed that one.  I'll ignore it though");
+        console.log("Whoops!  You already guessed that one.  I'll ignore it though\n");
     } else {
-        console.log("Valid guess! ");
-
         // unique guess,  save it as a valid guess
         guessedLetters.push(userGuess.toLowerCase());
 
         // determine if this is a correct guess and write out the results
         word.guessLetter(userGuess.toLowerCase());
-        console.log(word.getWord());
     }
+    console.log(word.getWord());
 }
 
 

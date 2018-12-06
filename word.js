@@ -28,7 +28,7 @@ function Word() {
     this.getWord = () => {
         var word = "";
         for (let i=0; (i < this.word.length); i++ ) {
-            word += this.word[i].isGuessed();
+            word += " " + this.word[i].isGuessed() + " ";
         }
         return word;
     }
