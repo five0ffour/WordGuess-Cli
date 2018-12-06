@@ -96,7 +96,7 @@ function validateGuess(userGuess) {
         uniqueGuesses.push(guess);
 
 
-        if (!word.goodGuess(userGuess)) {
+        if (!word.goodGuess(guess)) {
             badGuesses++;
             console.log("Oops!  Nice try!  You have " + (maxMistakes-badGuesses) + " mulligans left!\n");
         }
