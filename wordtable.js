@@ -1,5 +1,5 @@
 //--------
-// WordTable - List of words as game options
+// WordTable - List of words as game options,  our theme is American Megafuana -  Extinct or not
 //--------
 function WordTable () {
 
