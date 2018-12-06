@@ -13,7 +13,7 @@ const maxMistakes = 10;                 // number of bad guesses before you hit 
 let badGuesses = 0;                     // the actual number of mistakes made by the user this game
 let word = new Word();                  // the word we'll be trying to find (once it's set)
 let currentRound = 0;                   // simple round counter
-let guessedLetters = [];                // array of letters, tracks the user's guesses to avoid duplicates
+let uniqueGuesses = [];                // array of letters, tracks the user's guesses to avoid duplicates
 
 //-----------
 // Methods
@@ -36,7 +36,7 @@ function resetGame() {
     badGuesses = 0;
     word = new Word();
     word.setWord(wordTable.getRandomWord());
-    guessedLetters = [];
+    uniqueGuesses = [];
 }
 
 //------------------
@@ -64,13 +64,13 @@ function promptGuess() {
 function validateGuess(userGuess) {
 
     // Check if it's already been guessed    
-    let match = guessedLetters.find(letter => letter === userGuess.toLowerCase());
+    let match = uniqueGuesses.find(letter => letter === userGuess.toLowerCase());
     if (match) {
         // letter already guessed
         console.log("Whoops!  You already guessed that one.  I'll ignore it though\n");
     } else {
         // unique guess,  save it as a valid guess
-        guessedLetters.push(userGuess.toLowerCase());
+        uniqueGuesses.push(userGuess.toLowerCase());
 
         // determine if this is a correct guess and write out the results
         word.guessLetter(userGuess.toLowerCase());
@@ -96,8 +96,7 @@ function playRound() {
 // isGameOver() - dose the logic of seeing if they won, ending the game or make too many incorrect guesses
 //-------------------
 function isGameOver() {
-    return (word.getWord() === word.original ||
-        badGuesses >= maxMistakes);
+    return (word.matchedWholeWord() || (badGuesses >= maxMistakes));
 }
 
 //-------------------
@@ -116,7 +115,7 @@ function endGame() {
             if (answer.again === true) {
                 playGame();
             } else {
-                console.log("Come back again soon!");
+                console.log("\nCome back again soon!");
             }
         });
 }

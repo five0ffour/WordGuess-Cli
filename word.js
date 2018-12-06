@@ -28,7 +28,7 @@ function Word() {
     this.getWord = () => {
         var word = "";
         for (let i=0; (i < this.word.length); i++ ) {
-            word += " " + this.word[i].isGuessed() + " ";
+            word += " " + this.word[i] + " ";
         }
         return word;
     }
@@ -38,6 +38,20 @@ function Word() {
         for (let i=0; (i < this.word.length); i++) { 
              this.word[i].guessLetter(guess); 
         }
+    }
+
+    // matchedWord() - did they guess the entire word?  true or false
+    this.matchedWholeWord = () => {
+
+        debugger;
+        let found = true;
+        for (let i=0; (i < this.word.length); i++ ) {
+            if (this.word[i].toString() === "_") {
+               found = false;
+               break;
+            }
+        }
+        return found;
     }
 
     // unitTest() - simple test script to validate methods
