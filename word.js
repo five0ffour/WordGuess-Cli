@@ -43,7 +43,6 @@ function Word() {
     // matchedWord() - did they guess the entire word?  true or false
     this.matchedWholeWord = () => {
 
-        debugger;
         let found = true;
         for (let i=0; (i < this.word.length); i++ ) {
             if (this.word[i].toString() === "_") {
@@ -52,6 +51,11 @@ function Word() {
             }
         }
         return found;
+    }
+
+    // validGuess() - determine if the passed character is in the solution set of correct letters (adjusted for case differences)
+    this.goodGuess = (guess) => {
+        return this.original.toLowerCase().includes(guess);
     }
 
     // unitTest() - simple test script to validate methods
