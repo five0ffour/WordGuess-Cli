@@ -25,20 +25,17 @@ A modern IDE - it was developed using Visual Studio Code, but any text editor wo
 GitHub 
 GitBash installed locally  
   
-## Installing  
-1.  Find a Locate an empty directory on your hard drive  
-2.  Open a bash terminal in that directory  
-3.  Clone the WordGuess-Game repo down from Github   
-         "git clone https://github.com/five0ffour/WordGuess-Game.git"  
-4.  Open Index.html in your favorite browser  
-        It should display the game board and prompt you for an entry  
-  
 ## Sample install    
-1.  Install Node.js following the instructions at http://www.nodejs.com  
-2.  Pull the repository down to a clean directory from Git http://fiveoffour.github.com/wordguess-cli  
-3.  Open a bash window in that directory  
-4.  Update the node package dependencies:   npm install  
-5.  Run the game:  node index.js  
+1.  Install Node.js following the instructions at https://nodejs.org/en/  
+2.  Find a Locate an empty directory on your hard drive  
+3.  Open a bash terminal in that directory  
+4.  Clone the WordGuess-Game repo down from Github   
+        $ git clone https://github.com/five0ffour/WordGuess-Cli.git  
+4.  Open a bash window in that directory  
+5.  Update the node package dependencies to bring down node modules and inquirer:   
+        $ npm install  
+6.  Run the game:    
+        $ node index.js      
   
 ## Developer notes  
 index.js:  main entry point, main game logic and inquirer user interface  
