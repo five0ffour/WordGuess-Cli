@@ -7,12 +7,13 @@ function Letter(letter) {
     var _this = this;
     this.value = letter;
     this.guessed = false;
+
     this.isGuessed = function () {
-        return (_this.guessed ? _this.value : "_");
+        return ((_this.guessed || (_this.value === ' '))? _this.value : "_");
     };
+
     this.guessLetter = function (character) {
-        if ((character === ' ') ||
-            (character.toLowerCase() === _this.value.toLowerCase())) {
+        if (character.toLowerCase() === _this.value.toLowerCase()) {
             _this.guessed = true;
         }
     };
